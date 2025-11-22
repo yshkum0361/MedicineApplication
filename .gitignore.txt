@@ -1,0 +1,25 @@
+# Binaries and build output
+[Bb]in/
+[Oo]bj/
+# NuGet packages directory
+.nuget/
+# Visual Studio files
+*.vspscc
+*.vssscc
+*.suo
+*.user
+# Temporary files
+[Tt]emp/
+# Configuration and secrets
+appsettings.Development.json
+appsettings.Production.json
+# EF Core/Database files
+*.mdf
+*.ldf
+bin/
+obj/
+appsettings.json
+*.user
+*.db
+*.log
+

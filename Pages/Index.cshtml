@@ -1,0 +1,28 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome, @Model.UserName!</h1>
+    <p>This is your post-login dashboard for the .NET 8 / MSSQL Engineer Assignment.</p>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-6 offset-md-3">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">User Details</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Username:</strong> @Model.UserName</li>
+                <li class="list-group-item"><strong>Email:</strong> @Model.UserEmail</li>
+                <li class="list-group-item"><strong>Login Provider:</strong> @Model.Provider</li>
+                <li class="list-group-item">
+                    <a class="btn btn-sm btn-outline-secondary" asp-area="Identity" asp-page="/Account/Manage/Index">Manage Account</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
