@@ -279,3 +279,29 @@ Edit medicine	POST	/Medicines/Edit/{id}
 Delete medicine	POST	/Medicines/Delete/{id}
 
 All actions require an authenticated user.
+
+```
+Feature,Status,Details
+Authentication,✅ Implemented,SSO via Google (OpenID Connect/OAuth 2.0 flow) using Microsoft.AspNetCore.Authentication.Google.
+User Persistence,✅ Implemented,"Uses ApplicationUser (extends IdentityUser) to store login details (name, email, provider, timestamp) in the DB."
+CRUD Operations,✅ Implemented,"Full CRUD functionality for the Medicine entity via scaffolded Razor Pages (/Medicines/Create, /Edit, /Delete)."
+Database Schema,✅ Implemented,MSSQL database (Medicines and Identity tables) managed by EF Core.
+Post-Login Dashboard,✅ Implemented,"Displays logged-in user details (Username, Email, Login Provider)."
+Front-End/UI,✅ Implemented,Responsive UI using Bootstrap 5.
+```
+
+```
+Feature,Status,Details
+Search/Filter/Sort,✅ Implemented,"The Medicine List page includes filtering by Name/Company and supports sorting on Name, Price, and Expiry Date."
+Pagination,✅ Implemented,The Medicine List page implements server-side pagination (10 items per page).
+Logging/Error Handling,✅ Implemented,Standard ASP.NET Core logging and the Developer Exception Page middleware are configured.
+Deployment,(Optional),The solution is deployable to Azure App Services.
+
+```
+
+---
+🤖 List of AI / Tools Used
+The following AI tools were utilized to assist in the assignment structure, guidance, and code generation.
+
+Google Gemini (Flash 2.5) / CHAT GPT / Perplexity : Used for initial project structure guidance, generating EF Core model boilerplate, and refining the Razor Pages logic for sorting and pagination in the Medicines/Index.cshtml.cs file, used for google sign in, and Azure Deployment.
+---
